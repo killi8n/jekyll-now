@@ -319,7 +319,7 @@ font-size: 1.5rem;
 
 자 이제 글쓰는 페이지도 한번 디자인해봅시다!
 
-#BoardController.java
+# BoardController.java
 
 ```java
 @RequestMapping(value="/board/write", method=RequestMethod.GET)
@@ -332,7 +332,7 @@ return "board/boardWrite";
 
 
 
-#views/boardWrite.jsp
+# views/boardWrite.jsp
 
 ```html
 <%@include file="../include/header.jsp"%>
@@ -365,7 +365,7 @@ placeholder="author">
 
 자 이제 작성하는 폼과 보여주는 리스트를 작성 했으므로, 일단 상세정보 뷰는 접어두고, 컨트롤러부터 작성하러 갑시다!
 
-#BoardController.java
+# BoardController.java
 
 ```java
 @RequestMapping(value="/board/write", method=RequestMethod.POST)
@@ -376,7 +376,7 @@ return "redirect:/board";
 일단 위와같이 작성해두고, 서비스와 퍼시스턴스 패키지를 작성하러 갑시다!
 
 
-#service/BoardService.java
+# service/BoardService.java
 
 ```java
 package com.board.killi8n.service;
@@ -410,7 +410,7 @@ public void DeleteBoard(int bno);
 
 domain 패키지를 생성해주신후, BoardVO라는 클래스를 하나 만들어줍시다!
 
-#domain/BoardVO.java
+# domain/BoardVO.java
 
 ```java
 package com.board.killi8n.domain;
@@ -466,7 +466,7 @@ this.viewCount = viewCount;
 
 이제 DAO Interface 파일도 만들어볼까요?
 
-#persistance/BoardDAO
+# persistance/BoardDAO
 
 ```java
 package com.board.killi8n.persistance;
@@ -491,7 +491,7 @@ public void DeleteBoard(int bno);
 
 이제 이 두 인터페이스를 상속받는 클래스들을 만들어봅시다!
 
-#persistance/BoardDAOImpl
+# persistance/BoardDAOImpl
 
 ```java
 package com.board.killi8n.persistance;
@@ -548,7 +548,7 @@ public void DeleteBoard(int bno) {
 자 이제 구현해야할 메소드들이 많이 있죠?
 구현하기 위해서는 mapper파일과 연동해야 하기 때문에, mapper파일을 작성하러 갑시다
 
-#mappers/BoardMapper.xml
+# mappers/BoardMapper.xml
 
 ```xml
 <!DOCTYPE mapper
@@ -590,7 +590,7 @@ CDATA를 쓰는 이유는, > , >= , < , <= 와 같이 비교 문자를 사용할
 
 다시 daoImpl파일로 돌아가죠.
 
-#persistance/BoardDAOImpl
+# persistance/BoardDAOImpl
 
 ```java
 package com.board.killi8n.persistance;
@@ -647,8 +647,7 @@ session.delete(NAME_SPACE + ".deleteBoard", bno);
 메소드를 구현해줍시다.
 
 
-#
-service/BoardServiceImpl
+# service/BoardServiceImpl
 
 ```java
 package com.board.killi8n.service;
@@ -707,7 +706,7 @@ dao.DeleteBoard(bno);
 컨트롤러에서 inject 해볼까요?
 
 
-#controller/BoardController.java
+# controller/BoardController.java
 
 ```java
 package com.board.killi8n.controllers;
@@ -762,7 +761,7 @@ return "board/writeSuccess";
 성공 했다는 페이지를 만들어 주는게 나을거같아, 수정하였습니다.
 뷰에서 writeSuccess.jsp를 만들어줍시다!
 
-#views/board/writeSuccess.jsp
+# views/board/writeSuccess.jsp
 
 
 ```html
@@ -782,7 +781,7 @@ pageEncoding="UTF-8"%>
 <%@include file="../include/footer.jsp"%>
 ```
 
-#데이터베이스 구조
+# 데이터베이스 구조
 
 참,, 이것을 처음으로 다뤘어야 하는데, 일단 데이터베이스 구조는 다음과 같습니다!
 
@@ -807,8 +806,7 @@ mysql 테이블에서 select할수 있죠?
 그럼 이제 테이블에 들어간 글들을 보여줘볼까요?
 
 
-#
-views/board/boardIndex.jsp
+# views/board/boardIndex.jsp
 
 ```html
 <%@include file="../include/header.jsp"%>
@@ -862,7 +860,7 @@ c taglib을 사용하여 foreach문을 사용해서 돌려주었습니다.
 
 그렇다면 이제 세부 글을 볼수있는 페이지를 만들어봅시다.
 
-#views/board/boardDetail.jsp
+# views/board/boardDetail.jsp
 
 ```html
 <%@include file="../include/header.jsp"%>
@@ -957,7 +955,7 @@ pageEncoding="UTF-8"%>
 
 아 그리고 bbs 목록페이지에서 link를 걸어줘야겠죠?
 
-#view/board/boardIndex.jsp
+# view/board/boardIndex.jsp
 
 ```html
 (...)
@@ -971,7 +969,7 @@ pageEncoding="UTF-8"%>
 
 이제 수정과 삭제를 해볼까요?
 
-#views/board/boardDetail.jsp
+# views/board/boardDetail.jsp
 
 ```html
 <%@include file="../include/header.jsp"%>
