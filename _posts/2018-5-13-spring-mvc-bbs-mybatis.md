@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Spring MVC와 MyBatis, Bootstrap으로 기본적인 게시판 구현하기!
+comments: true
 ---
 
 # Spring MVC로 게시판 만들기
