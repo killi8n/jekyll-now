@@ -199,7 +199,7 @@ return "home";
 
 # Bootstrap
 
-[https://drive.google.com/drive/folders/1rrA9AjZjXECjPNEkFPif7lWVjW6my64-](https://drive.google.com/drive/folders/1rrA9AjZjXECjPNEkFPif7lWVjW6my64-)
+https://www.dropbox.com/home?preview=css%2Bjs-20180513T075253Z-001.zip
 
 일단 위 링크에서 부트스트랩 관련 자료들을 모두 다운받아주세요!
 
