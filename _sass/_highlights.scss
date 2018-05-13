@@ -11,11 +11,12 @@
 // }
 
 .highlight {
-      background: #f8f9fa;
+      background-color: #f8f9fa;
       padding: 0.25rem;
       color: #228be6;
       border: 1px solid #e9ecef;
       border-radius: 2px;
+      overflow: scroll;
 }
 
 code {
